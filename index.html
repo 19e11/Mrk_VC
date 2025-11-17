@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VC-Sys</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h2>Video Call</h2>
+
+    <div>
+      <div class="id">
+        <p>Your Peer ID: <span id="peer-id">...</span></p>
+        <button class="copy" onclick="copyUID()"><i class="ri-file-copy-line"></i></button>
+      </div>
+      <input
+        type="text"
+        id="connect-to-id"
+        placeholder="Enter peer ID to call"
+      />
+      <button id="call-btn">Start Call</button>
+      <button id="end-call-btn">End Call</button>
+    </div>
+
+    <hr />
+
+    <div style="display: flex; gap: 20px">
+      <div>
+        <h3>You</h3>
+        <video id="my-video" autoplay muted playsinline width="300"></video>
+      </div>
+      <div>
+        <h3>Partner</h3>
+        <video id="partner-video" autoplay playsinline width="300"></video>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
